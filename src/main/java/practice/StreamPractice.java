@@ -90,7 +90,7 @@ public class StreamPractice {
      */
     public List<String> getCatsNames(List<Person> peopleList, int femaleAge) {
         return peopleList.stream()
-                .filter(p -> p.getSex() == Person.Sex.WOMAN
+                .filter(p -> p.getSex().equals(Person.Sex.WOMAN)
                         && p.getAge() >= femaleAge
                         && !p.getCats().isEmpty()
                         && p.getCats() != null)
